@@ -19,14 +19,22 @@ defmodule TestepitechWeb.UserController do
       |> render(:show, user: user)
     end
   end
+
+  #def create(conn, %{"user" => params}) do
+  #  {:ok, _user} =
+  #    %User{}
+  #    |> User.changeset(params)
+  #    |> Repo.insert()
+  #  conn |> redirect(to: "/")
+  #end
+
   def show(conn, %{"id" => id}) do
-    # Convertir le paramètre "id" en entier
+    # Convert first "id" in int
     user_id = String.to_integer(id)
 
-    # Récupérer l'utilisateur en utilisant l'ID converti
+    # get user w/ the id
     user = Api.get_user!(user_id)
 
-    # Le reste de votre logique pour la réponse HTTP
     render(conn, :show, user: user)
   end
 
@@ -50,4 +58,5 @@ defmodule TestepitechWeb.UserController do
       send_resp(conn, :no_content, "")
     end
   end
+
 end

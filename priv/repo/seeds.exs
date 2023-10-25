@@ -10,9 +10,9 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 alias Testepitech.Repo
-alias Testepitech.User
-alias Testepitech.Clock
-Repo.insert! %Clock{datetime: "10/10/2023", status: "true"}
+alias Testepitech.Api.User
+#alias Testepitech.Api.Clock
+#Repo.insert! %Clock{datetime: "10/10/2023", status: "true"}
 
 
 Repo.insert! %User{username: "A", email: "1"}

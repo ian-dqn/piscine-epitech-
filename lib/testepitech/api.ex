@@ -1,6 +1,6 @@
 defmodule Testepitech.Api do
   @moduledoc """
-  The Api context.
+  The Api context
   """
 
   import Ecto.Query, warn: false
@@ -9,46 +9,23 @@ defmodule Testepitech.Api do
   alias Testepitech.Api.User
 
   @doc """
-  Returns the list of users.
-
-  ## Examples
-
-      iex> list_users()
-      [%User{}, ...]
-
+  Returns the list of users
   """
+
   def list_users do
     Repo.all(User)
   end
 
   @doc """
-  Gets a single user.
-
-  Raises `Ecto.NoResultsError` if the User does not exist.
-
-  ## Examples
-
-      iex> get_user!(123)
-      %User{}
-
-      iex> get_user!(456)
-      ** (Ecto.NoResultsError)
-
+  Gets a single user
   """
+
   def get_user!(id), do: Repo.get!(User, id)
 
   @doc """
-  Creates a user.
-
-  ## Examples
-
-      iex> create_user(%{field: value})
-      {:ok, %User{}}
-
-      iex> create_user(%{field: bad_value})
-      {:error, %Ecto.Changeset{}}
-
+  Creates a user
   """
+
   def create_user(attrs \\ %{}) do
     %User{}
     |> User.changeset(attrs)
@@ -56,17 +33,9 @@ defmodule Testepitech.Api do
   end
 
   @doc """
-  Updates a user.
-
-  ## Examples
-
-      iex> update_user(user, %{field: new_value})
-      {:ok, %User{}}
-
-      iex> update_user(user, %{field: bad_value})
-      {:error, %Ecto.Changeset{}}
-
+  Updates a user
   """
+
   def update_user(%User{} = user, attrs) do
     user
     |> User.changeset(attrs)
@@ -74,30 +43,17 @@ defmodule Testepitech.Api do
   end
 
   @doc """
-  Deletes a user.
-
-  ## Examples
-
-      iex> delete_user(user)
-      {:ok, %User{}}
-
-      iex> delete_user(user)
-      {:error, %Ecto.Changeset{}}
-
+  Deletes a user
   """
+
   def delete_user(%User{} = user) do
     Repo.delete(user)
   end
 
   @doc """
-  Returns an `%Ecto.Changeset{}` for tracking user changes.
-
-  ## Examples
-
-      iex> change_user(user)
-      %Ecto.Changeset{data: %User{}}
-
+  Returns an `%Ecto.Changeset{}` for tracking user changes
   """
+
   def change_user(%User{} = user, attrs \\ %{}) do
     User.changeset(user, attrs)
   end
@@ -105,46 +61,24 @@ defmodule Testepitech.Api do
   alias Testepitech.Api.Clock
 
   @doc """
-  Returns the list of clocks.
-
-  ## Examples
-
-      iex> list_clocks()
-      [%Clock{}, ...]
-
+  Returns the list of clocks
   """
+
   def list_clocks do
     Repo.all(Clock)
   end
 
   @doc """
-  Gets a single clock.
-
-  Raises `Ecto.NoResultsError` if the Clock does not exist.
-
-  ## Examples
-
-      iex> get_clock!(123)
-      %Clock{}
-
-      iex> get_clock!(456)
-      ** (Ecto.NoResultsError)
-
+  Gets a single clock
+  Raises `Ecto.NoResultsError` if the Clock does not exist
   """
+
   def get_clock!(id), do: Repo.get!(Clock, id)
 
   @doc """
-  Creates a clock.
-
-  ## Examples
-
-      iex> create_clock(%{field: value})
-      {:ok, %Clock{}}
-
-      iex> create_clock(%{field: bad_value})
-      {:error, %Ecto.Changeset{}}
-
+  Creates a clock
   """
+
   def create_clock(attrs \\ %{}) do
     %Clock{}
     |> Clock.changeset(attrs)
@@ -152,17 +86,9 @@ defmodule Testepitech.Api do
   end
 
   @doc """
-  Updates a clock.
-
-  ## Examples
-
-      iex> update_clock(clock, %{field: new_value})
-      {:ok, %Clock{}}
-
-      iex> update_clock(clock, %{field: bad_value})
-      {:error, %Ecto.Changeset{}}
-
+  Updates a clock
   """
+
   def update_clock(%Clock{} = clock, attrs) do
     clock
     |> Clock.changeset(attrs)
@@ -170,30 +96,17 @@ defmodule Testepitech.Api do
   end
 
   @doc """
-  Deletes a clock.
-
-  ## Examples
-
-      iex> delete_clock(clock)
-      {:ok, %Clock{}}
-
-      iex> delete_clock(clock)
-      {:error, %Ecto.Changeset{}}
-
+  Deletes a clock
   """
+
   def delete_clock(%Clock{} = clock) do
     Repo.delete(clock)
   end
 
   @doc """
-  Returns an `%Ecto.Changeset{}` for tracking clock changes.
-
-  ## Examples
-
-      iex> change_clock(clock)
-      %Ecto.Changeset{data: %Clock{}}
-
+  Returns an `%Ecto.Changeset{}` for tracking clock changes
   """
+
   def change_clock(%Clock{} = clock, attrs \\ %{}) do
     Clock.changeset(clock, attrs)
   end
@@ -201,46 +114,24 @@ defmodule Testepitech.Api do
   alias Testepitech.Api.Workingtime
 
   @doc """
-  Returns the list of workingtimes.
-
-  ## Examples
-
-      iex> list_workingtimes()
-      [%Workingtime{}, ...]
-
+  Returns the list of workingtimes
   """
+
   def list_workingtimes do
     Repo.all(Workingtime)
   end
 
   @doc """
-  Gets a single workingtime.
-
-  Raises `Ecto.NoResultsError` if the Workingtime does not exist.
-
-  ## Examples
-
-      iex> get_workingtime!(123)
-      %Workingtime{}
-
-      iex> get_workingtime!(456)
-      ** (Ecto.NoResultsError)
-
+  Gets a single workingtime
+  Raises `Ecto.NoResultsError` if the Workingtime does not exist
   """
+
   def get_workingtime!(id), do: Repo.get!(Workingtime, id)
 
   @doc """
-  Creates a workingtime.
-
-  ## Examples
-
-      iex> create_workingtime(%{field: value})
-      {:ok, %Workingtime{}}
-
-      iex> create_workingtime(%{field: bad_value})
-      {:error, %Ecto.Changeset{}}
-
+  Creates a workingtime
   """
+
   def create_workingtime(attrs \\ %{}) do
     %Workingtime{}
     |> Workingtime.changeset(attrs)
@@ -248,17 +139,9 @@ defmodule Testepitech.Api do
   end
 
   @doc """
-  Updates a workingtime.
-
-  ## Examples
-
-      iex> update_workingtime(workingtime, %{field: new_value})
-      {:ok, %Workingtime{}}
-
-      iex> update_workingtime(workingtime, %{field: bad_value})
-      {:error, %Ecto.Changeset{}}
-
+  Updates a workingtime
   """
+
   def update_workingtime(%Workingtime{} = workingtime, attrs) do
     workingtime
     |> Workingtime.changeset(attrs)
@@ -266,30 +149,17 @@ defmodule Testepitech.Api do
   end
 
   @doc """
-  Deletes a workingtime.
-
-  ## Examples
-
-      iex> delete_workingtime(workingtime)
-      {:ok, %Workingtime{}}
-
-      iex> delete_workingtime(workingtime)
-      {:error, %Ecto.Changeset{}}
-
+  Deletes a workingtime
   """
+
   def delete_workingtime(%Workingtime{} = workingtime) do
     Repo.delete(workingtime)
   end
 
   @doc """
-  Returns an `%Ecto.Changeset{}` for tracking workingtime changes.
-
-  ## Examples
-
-      iex> change_workingtime(workingtime)
-      %Ecto.Changeset{data: %Workingtime{}}
-
+  Returns an `%Ecto.Changeset{}` for tracking workingtime changes
   """
+
   def change_workingtime(%Workingtime{} = workingtime, attrs \\ %{}) do
     Workingtime.changeset(workingtime, attrs)
   end

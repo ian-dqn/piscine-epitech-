@@ -7,11 +7,11 @@ defmodule TestepitechWeb.ClockControllerTest do
 
   @create_attrs %{
     status: true,
-    time: ~N[2023-10-23 15:11:00]
+    datetime: ~N[2023-10-23 15:11:00]
   }
   @update_attrs %{
     status: false,
-    time: ~N[2023-10-24 15:11:00]
+    datetime: ~N[2023-10-24 15:11:00]
   }
   @invalid_attrs %{status: nil, time: nil}
 
